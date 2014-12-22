@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>JUJU</title>
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <link href="" rel="Shortcut Icon" type="image/x-icon">
+  <link href="" rel="apple-touch-icon-precomposed">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="vendor/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="vendor/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/css/app.css">
+  <link rel="stylesheet" href="vendor/css/custom_bootstrap.css">
+  <link rel="stylesheet" href="vendor/css/font-awesome.min.css">
+  <script>
+  var uid = 10000150;
+  </script>
+</head>
+<body ng-app="jujuapp">
+  <script src="vendor/js/angular.min.js"></script>
+  <script src="vendor/js/jquery-1.11.2.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="vendor/js/app.js"></script>
+  <script src="vendor/js/animation.js"></script>
+  <script src="vendor/js/bootstrap.min.js"></script>
+  <div class="container main">
+
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <div ng-include="'views/game-slide.html'"></div>
+        </div>
+        <div class="item">
+          <div ng-include="'views/wish-slide.html'"></div>
+        </div>
+        <div class="item">
+          <div ng-include="'views/invite-slide.html'"></div>
+        </div>
+      </div>
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+    </div>
+
+
+    <!-- Modals -->
+    <div ng-include="'views/friend.html'"></div>
+    <div ng-include="'views/recommend.html'"></div>
+    <div ng-include="'views/gift.html'"></div>
+    <div ng-include="'views/comedy.html'"></div>
+    <div ng-include="'views/extra-invite.html'"></div>
+
+
+
+  </div>
+</body>
+</html>

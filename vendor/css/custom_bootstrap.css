@@ -1,0 +1,270 @@
+.carousel-indicators{
+	position:fixed;
+	top:95%;
+}
+
+/*button*/
+.btn-red-inverse{
+	background-color:transparent;
+	border:1px solid red;
+	color:red;
+	padding:6px 11px;
+	font-size: 14px;
+}
+.btn-red{
+	background-color:red;
+	color:white;
+	font-size: 14px;
+}
+
+.btn-yellow-inverse{
+	background-color:transparent;
+	border:1px solid yellow;
+	color:yellow;
+
+}
+.btn-yellow{
+	background-color: yellow;
+	color:#0094F8;
+	font-size: 16px;
+	padding:7px 20px;
+
+}
+
+.btn-blue{
+	background-color: #1298F2;
+	color:white;
+	padding:6px 20px;
+}
+.btn-orange{
+	background-color: #FFC900;
+	color: #1F1D00;
+	padding:10px 40px;
+	margin-top:20px;
+}
+.btn-orange-inverse{
+	border:1px solid #FFC900;
+	background-color: transparent;
+	color: #FFC900;
+	padding:6px 11px;
+	font-size: 14px;
+	margin-top:15px;
+}
+.btn-blue-container{
+	position: relative;
+}
+.btn-star{
+	background: url('../../img/btn-star.png');
+	background-size: 101%;
+	position: absolute;
+	width:20px;
+	height:20px;
+	left:63%;
+	top:-10%;
+}
+
+/* modal */
+#mywish .modal-content, #extra-invite .modal-content, #comedy .modal-content, #friend .modal-content, #gift .modal-content, #recommend .modal-content{
+	background-color: transparent;
+	max-width:272px;
+	margin:auto;
+	box-shadow: none;
+}
+#extra-invite .modal-content{
+	max-width:274px;
+	margin-top:100px;
+}
+#mywish .modal-header,#extra-invite .modal-header{
+	border:none;
+	background: url('../../img/envelope-header.png') no-repeat 50% top;
+	background-size: 100%;
+	padding-bottom: 0;
+	padding-top: 12%;
+	padding-bottom: 5%;
+	background-color: transparent;
+	
+}
+#mywish .modal-title{
+	color:#000600;
+	text-shadow:none;
+	margin-top:15px;
+	font-size: 15px;
+}
+#extra-invite .modal-header{
+	padding-top: 17%;
+	padding-bottom: 0;
+	position: relative;
+	z-index: 3;
+}
+#mywish .modal-body,#extra-invite .modal-body{
+	border:none;
+	background: url('../../img/envelope-body.png') no-repeat right -5%;
+	background-size: 100%;
+	padding-top: 15%;
+	padding-bottom:100px;
+	margin-top:-8px;
+	background-color: transparent;
+}
+#extra-invite .modal-body{
+	margin-top:-17px;
+}
+#mywish .modal-footer,#extra-invite .modal-footer, #comedy .modal-footer, #friend .modal-footer, #gift .modal-footer, #recommend .modal-footer{
+	border:none;
+	text-align: center;
+}
+#extra-invite .modal-footer{
+	margin-top:60px;
+}
+#mywish input,#extra-invite input{
+	width:90%;
+	margin:auto;
+	margin-bottom: 25%;
+	box-shadow: none;
+	border:none;
+	height:40px;
+}
+#extra-invite-title{
+	width:80%;
+	margin:auto;
+	font-size: 16px;
+	color:#333;
+	z-index: 3;
+}
+#extra-invite form{
+	text-align: center;
+}
+
+#comedy .modal-header, #friend .modal-header, #gift .modal-header{
+	border:none;
+	background-color: none;
+}
+#comedy .modal-body, #friend .modal-body, #gift .modal-body{
+	border:none;
+	border-radius: 10px;
+	background: url('../../img/comedy-bg.png') no-repeat right -5%;
+	background-size: 100%;
+	padding-top: 25%;
+	padding-bottom:100px;
+	margin-top:-8px;
+	background-color: transparent;
+}
+#recommend .modal-body{
+	border:none;
+	border-radius: 0px;
+	background: url('../../img/recommend-bg.png') no-repeat right -5%;
+	background-size: 100%;
+	padding-top: 28%;
+	padding-bottom:20px;
+	margin-top:-8px;
+	background-color: transparent;
+}
+#comedy .modal-body{
+	max-height: 100px;
+}
+#friend .modal-body{
+	max-height: 220px;
+}
+#friend textarea{
+	min-height:100px;
+}
+#friend button{
+	margin:auto;
+	background-color:transparent;
+	border:none;
+	color:#1298F2;
+}
+#gift .modal-body{
+	padding-top:14%;
+	max-height: 440px;
+	padding-bottom: 20px;
+}
+#gift .description, #gift .title{
+	font-size: 16px;
+}
+/* panel */
+.invite-panel{
+	background-color: transparent;
+	border:none;
+	width:272px;
+	margin:auto;
+}
+.invite-panel .panel-heading{
+	border:none;
+	background: url('../../img/envelope-header.png') no-repeat 50% top;
+	background-size: 100%;
+	padding-bottom: 0;
+	padding-top: 20%;
+	background-color: transparent;
+	text-align: center;
+}
+.invite-panel .panel-title{
+	width:80%;
+	margin:auto;
+	text-shadow: none;
+}
+
+.invite-panel .panel-body{
+	border:none;
+	background: url('../../img/envelope-body.png') no-repeat right -5%;
+	background-size: 100%;
+	margin-top:-16px;
+	padding-top: 20%;
+	padding-bottom:100px;
+	background-color: transparent;
+}
+.invite-panel input{
+	width:80%;
+	margin:auto;
+	margin-bottom: 29%;
+}
+
+.invite-panel .dropdown-menu{
+	top: -187px;
+	left: 0;
+	right:0;
+	width:160px;
+	margin:auto;
+	box-shadow: none;
+	background-color: rgba(0, 148, 248,0.8);
+	overflow: hidden;
+	border-radius: 10px;
+	border:none;
+	padding:0;
+
+}
+.invite-panel .dropdown-menu li{
+	text-align: center;
+	text-shadow:none;
+	border-bottom: 1px solid rgba(255,255,255,0.2);
+
+}
+.invite-panel .dropdown-menu li:last-child{
+	border:none;
+}
+.invite-panel .dropdown-menu li a{
+	color:white;
+	padding:5px 0px;
+
+}
+.invite-panel .dropdown-menu li a:focus, .invite-panel .dropdown-menu li a:hover{
+	color:white;
+	background-color: rgba(33, 44, 95,0.8);
+	background-image: none;
+}
+
+/* carousel */
+.carousel-indicators{
+	top:90%;
+}
+.carousel-indicators li{
+	border:none;
+	background-color: rgba(255,255,255,0.3);
+	margin-left:10px;
+	margin-right:10px;
+}
+.carousel-indicators .active{
+	width:10px;
+	height:10px;
+	margin-left:10px;
+	margin-right:10px;
+}

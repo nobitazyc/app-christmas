@@ -1,0 +1,20 @@
+<!--奖品 -->
+<div class="modal fade" id="gift" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="giftController">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body centered">
+        <h3 class="title">{{data.gift_title}}</h3>
+        <img ng-src="{{data.gift_image}}" class="recommend-image">
+        </hr>
+        <span class="description">{{data.gift_description}}</span>
+      </div>
+      <div class="modal-footer">
+         <button type="button" class="btn btn-blue rounded" ng-click="share()" data-dismiss="modal">炫耀</button>
+         <button type="button" class="btn btn-blue rounded" data-dismiss="modal">继续抽奖</button>
+      </div>
+    </div>
+  </div>
+</div>
