@@ -43,7 +43,7 @@ $(function(){
 			})
 			$scope.data.play_last_count--;
 			$('.game-play').css('display',"none");
-			$('.game-gif').attr('src','img/game-animation.gif');
+			$('.game-gif').attr('src','img/gameanimation.gif');
 			sharedService.broadcast();
 			setTimeout(function(){
 				switch($scope.result){
