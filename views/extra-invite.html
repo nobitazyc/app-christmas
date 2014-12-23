@@ -4,17 +4,24 @@
         <div class="modal-content">
           <div class="modal-header envelope-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h3 class="modal-title centered" id="extra-invite-title">恭喜你又可以邀请1位好基友</h3>
           </div>
           <div class="modal-body invite-panel">
             <div style="position:relative" class="centered">
+             <h3 class="modal-title centered" id="extra-invite-title">阿勒。。。给你个邀请基友来异界的机会吧</h3>
                <input id="bLable" class="form-control rounded" placeholder="邀请人昵称" data-toggle="dropdown" ng-model="invite_user" ng-change="filterInvite()" ng-focus="filterInvite()">
              <ul class="dropdown-menu invite_dropdown" role="menu" aria-labelledby="dLabel">
                 <li ng-repeat="user in show_data | limitTo:6 " >
                   <a ng-click="checkInvite($index)">{{user.username}}</a>
                 </li>
              </ul>
-             <button class="btn btn-yellow rounded" ng-click="sendInvite()">发送邀请</button>
+             <span class="push-right hint">ps. 点我的腿毛发送邀请</span>
+             <div class="clear graph-button-container" >
+               <div class="graph-button pull-left"> 
+               </div>
+               <div class="graph-button push-right">  
+               </div>
+            </div>
+            <button class="invite-visual-btn btn btn-yellow rounded" ng-mouseenter="inAnimation()" ng-mouseleave="outAnimation()" ng-click="sendInvite()">发送邀请</button>
            <div>
           </div>
           <div class="modal-footer">

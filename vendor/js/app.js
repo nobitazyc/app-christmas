@@ -121,6 +121,14 @@ $(function(){
 			$scope.invite_user = $scope.show_data[index].username;
 			$scope.invite_userid = $scope.show_data[index].userid;
 		};
+		$scope.inAnimation = function(){
+			$('.graph-button').css("margin-top","-20px");
+			$('.graph-button').css("margin-bottom","20px");
+		};
+		$scope.outAnimation = function(){
+			$('.graph-button').css("margin-top","0px");
+			$('.graph-button').css("margin-bottom","0px");
+		};
 		$scope.sendInvite = function(){
 			$http.get(host + 'yj/invite?userid='+uid+'&invite_user:'+$scope.invite_userid
 			).success(function(data){

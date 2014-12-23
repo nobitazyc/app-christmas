@@ -70,11 +70,16 @@
 	margin:auto;
 	box-shadow: none;
 }
+
 #extra-invite .modal-content{
 	max-width:274px;
 	margin-top:100px;
 }
-#mywish .modal-header,#extra-invite .modal-header{
+#extra-invite .modal-content{
+	background: url('../../img/prize.png') no-repeat center top;
+	background-size: 90%;
+}
+#mywish .modal-header{
 	border:none;
 	background: url('../../img/envelope-header.png') no-repeat 50% top;
 	background-size: 100%;
@@ -84,6 +89,11 @@
 	background-color: transparent;
 	
 }
+#extra-invite .modal-header{
+	background-color: transparent;
+	background-image: none;
+}
+
 #mywish .modal-title{
 	color:#000600;
 	text-shadow:none;
@@ -95,6 +105,7 @@
 	padding-bottom: 0;
 	position: relative;
 	z-index: 3;
+	border:none;
 }
 #mywish .modal-body,#extra-invite .modal-body{
 	border:none;
@@ -107,13 +118,27 @@
 }
 #extra-invite .modal-body{
 	margin-top:-17px;
+	background: url('../../img/invite-box.png') no-repeat right 20%;
+	background-size: 100%;
+	padding-top:100px;
+}
+#extra-invite .graph-button-container{
+	position: relative;
+	z-index: -1;
+	padding:0 40px;
+}
+#extra-invite .graph-button{
+	width:50px;
+	height: 100px;
+	background: url('../../img/leg.png') no-repeat center 40%;
+	background-size: 90%;
 }
 #mywish .modal-footer,#extra-invite .modal-footer, #comedy .modal-footer, #friend .modal-footer, #gift .modal-footer, #recommend .modal-footer{
 	border:none;
 	text-align: center;
 }
 #extra-invite .modal-footer{
-	margin-top:60px;
+	margin-top:0px;
 }
 #mywish input,#extra-invite input{
 	width:90%;
@@ -122,6 +147,9 @@
 	box-shadow: none;
 	border:none;
 	height:40px;
+}
+#extra-invite input{
+	margin-bottom: 0;
 }
 #extra-invite-title{
 	width:80%;
@@ -187,10 +215,12 @@
 	border:none;
 	width:272px;
 	margin:auto;
+	background: url('../../img/prize.png') no-repeat center top;
+	background-size: 90%;
 }
 .invite-panel .panel-heading{
 	border:none;
-	background: url('../../img/envelope-header.png') no-repeat 50% top;
+	background-image: none;
 	background-size: 100%;
 	padding-bottom: 0;
 	padding-top: 20%;
@@ -201,23 +231,50 @@
 	width:80%;
 	margin:auto;
 	text-shadow: none;
+	
 }
 
 .invite-panel .panel-body{
 	border:none;
-	background: url('../../img/envelope-body.png') no-repeat right -5%;
+	background: url('../../img/invite-box.png') no-repeat center 27%;
 	background-size: 100%;
 	margin-top:-16px;
-	padding-top: 20%;
+	padding-top: 36%;
 	padding-bottom:100px;
 	background-color: transparent;
 }
+.invite-panel .panel-body .invite-title{
+	width:70%;
+	font-size: 15px;
+	color:#7B6327;
+	text-shadow:none;
+	margin:auto;
+	margin-bottom: 15px;
+}
+.invite-panel .hint{
+	margin-right:20px;
+	text-shadow:none;
+	color:#7B6327;
+}
 .invite-panel input{
+	background-color: #FCE1BB;
+	border-radius: 0;
+	border:none;
 	width:80%;
 	margin:auto;
-	margin-bottom: 29%;
+	margin-bottom: 10px;
 }
-
+.invite-panel .graph-button-container{
+	position: relative;
+	z-index: -1;
+	padding:0 40px;
+}
+.invite-panel .graph-button{
+	width:50px;
+	height: 100px;
+	background: url('../../img/leg.png') no-repeat center 40%;
+	background-size: 90%;
+}
 .invite-panel .dropdown-menu{
 	top: -187px;
 	left: 0;
@@ -231,6 +288,11 @@
 	border:none;
 	padding:0;
 
+}
+.invite-panel .invite-visual-btn{
+	margin-top:-80px;
+	width:100%;
+	opacity: 0;
 }
 .invite-panel .dropdown-menu li{
 	text-align: center;

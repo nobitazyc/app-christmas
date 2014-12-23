@@ -3,21 +3,29 @@
 	<div class="container">
 		<div ng-controller="inviteController as jujuCtrl" class="centered">
 			<div class="panel panel-default invite-panel">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">恭喜你又可以多邀请1位好基友来异界长长世面辣！</h3>
-			  </div>
-			  <div class="panel-body">
-			  	 <div style="position:relative">
-				     <input id="bLable" class="form-control rounded" placeholder="邀请人昵称" data-toggle="dropdown" ng-model="invite_user" ng-change="filterInvite()" ng-focus="filterInvite()">
-					 <ul class="dropdown-menu invite_dropdown" role="menu" aria-labelledby="dLabel">
-					    <li ng-repeat="user in show_data | limitTo:6 " >
-					   		<a ng-click="checkInvite($index)">{{user.username}}</a>
-					    </li>
-					 </ul>
-				 <div>
-				<button class="btn btn-yellow rounded" ng-click="sendInvite()">发送邀请</button>
-			  </div>
-			</div>	
+				<div class="panel-heading">
+				</div>
+				<div class="panel-body">
+				  	<div style="position:relative">
+				  	 	 <h3 class="invite-title">阿勒。。。给你个邀请基友来异界的机会吧</h3>
+					     <input id="bLable" class="form-control rounded" placeholder="邀请人昵称" data-toggle="dropdown" ng-model="invite_user" ng-change="filterInvite()" ng-focus="filterInvite()">
+						 <ul class="dropdown-menu invite_dropdown" role="menu" aria-labelledby="dLabel">
+						    <li ng-repeat="user in show_data | limitTo:6 " >
+						   		<a ng-click="checkInvite($index)">{{user.username}}</a>
+						    </li>
+						 </ul>
+						 <span class="push-right hint">ps. 点我的腿毛发送邀请</span>
+					
+					</div>	
+					<div class="clear graph-button-container" >
+						 <div class="graph-button pull-left">	
+						 </div>
+						 <div class="graph-button push-right">	
+						 </div>
+					</div>
+					<button class="invite-visual-btn btn btn-yellow rounded" ng-mouseenter="inAnimation()" ng-mouseleave="outAnimation()" ng-click="sendInvite()">发送邀请</button>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
