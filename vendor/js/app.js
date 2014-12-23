@@ -35,7 +35,7 @@ $(function(){
 		$scope.clickcheck = false;
 		$scope.play = function(){
 			$scope.clickcheck = true;
-			$http.get(host + 'yj/randapi').success(function(data){
+			$http.get(host + 'merry/randapi').success(function(data){
 				$scope.result = data.result;
 			})
 			$http.get(host + 'yj/niu?userid='+$scope.data.userid).success(function(data){
@@ -48,19 +48,11 @@ $(function(){
 			setTimeout(function(){
 				switch($scope.result){
 					case 0:{
-						$('#comedy').modal('show');
+						$('#fail').modal('show');
 						break;
 					}
 					case 1:{
-						$('#friend').modal('show');
-						break;
-					}
-					case 2:{
 						$('#gift').modal('show');
-						break;
-					}
-					case 3:{
-						$('#extra-invite').modal('show');
 						break;
 					}
 				}
@@ -72,14 +64,6 @@ $(function(){
 
 			//这里需要接口9储存抽奖信息， 参数为$scope.
 		};
-		$scope.changeimg = function(){
-			if(!$scope.clickcheck)
-			$('.game-gif').attr('src','img/gamestart-hover.png');
-		}
-		$scope.reverseimg = function(){
-			if(!$scope.clickcheck)
-			$('.game-gif').attr('src','img/gamestart.png');
-		}
 	}]);
 
 
@@ -264,6 +248,9 @@ $(function(){
 		};
 		$scope.dislikeit = function(index){
 			$scope.wishes[index].i_liked = false;
+			$http.get(host + 'yj/cancelfavour?userid=' + uid +'&dreamid=' + $scope.wishes[index].dreamid).success(function(data){
+				//
+			});
 			//这里调用接口13储存点赞信息，参数$scope.current_user.username, $scope.wishes[index].username, false
 
 		};

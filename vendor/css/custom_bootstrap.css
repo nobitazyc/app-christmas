@@ -64,11 +64,12 @@
 }
 
 /* modal */
-#mywish .modal-content, #extra-invite .modal-content, #comedy .modal-content, #friend .modal-content, #gift .modal-content, #recommend .modal-content{
+#mywish .modal-content, #extra-invite .modal-content, #comedy .modal-content, #friend .modal-content, #gift .modal-content, #recommend .modal-content ,#fail .modal-content{
 	background-color: transparent;
 	max-width:272px;
 	margin:auto;
 	box-shadow: none;
+	border:none;
 }
 
 #extra-invite .modal-content{
@@ -89,9 +90,10 @@
 	background-color: transparent;
 	
 }
-#extra-invite .modal-header{
+#extra-invite .modal-header, #fail .modal-header{
 	background-color: transparent;
 	background-image: none;
+	border:none;
 }
 
 #mywish .modal-title{
@@ -107,7 +109,7 @@
 	z-index: 3;
 	border:none;
 }
-#mywish .modal-body,#extra-invite .modal-body{
+#mywish .modal-body,#extra-invite .modal-body, #fail .modal-body{
 	border:none;
 	background: url('../../img/envelope-body.png') no-repeat right -5%;
 	background-size: 100%;
@@ -115,6 +117,11 @@
 	padding-bottom:100px;
 	margin-top:-8px;
 	background-color: transparent;
+}
+#fail .modal-body{
+	background: url('../../img/fail.png') no-repeat center 40%;
+	background-size: 90%;
+	min-height: 400px;
 }
 #extra-invite .modal-body{
 	margin-top:-17px;
@@ -133,7 +140,7 @@
 	background: url('../../img/leg.png') no-repeat center 40%;
 	background-size: 90%;
 }
-#mywish .modal-footer,#extra-invite .modal-footer, #comedy .modal-footer, #friend .modal-footer, #gift .modal-footer, #recommend .modal-footer{
+#mywish .modal-footer,#extra-invite .modal-footer, #comedy .modal-footer, #friend .modal-footer, #gift .modal-footer, #recommend .modal-footer, #fail .modal-footer{
 	border:none;
 	text-align: center;
 }
@@ -191,11 +198,17 @@
 }
 #friend .modal-body{
 	max-height: 220px;
+	padding-left:0;
+	padding-right:0;
 }
 #friend textarea{
 	min-height:100px;
+	width:100%;
+	border:none;
+	background-color:#eeeeee;
+	box-shadow: none;
 }
-#friend button{
+#friend #sendwish{
 	margin:auto;
 	background-color:transparent;
 	border:none;

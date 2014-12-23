@@ -52,7 +52,7 @@
 }
 
 body{
-	background: url('../../img/bg.png') no-repeat left top;
+	background: url('../../img/christmas-bg.png') no-repeat left top;
 	background-size: 100%;
 }
 .ui-loader{
@@ -83,7 +83,7 @@ body{
 .game-gif{
 	width: 130%;
 	left: -15%;
-	margin-top: -10%;
+	margin-top: -20%;
 }
 .game-container{
 	position:relative;
@@ -91,7 +91,7 @@ body{
 }
 .game-play{
 	position: absolute;
-	top: 62.5%;
+	top: 66%;
 	left: 57%;
 	padding: 0;
 }
@@ -148,6 +148,7 @@ body{
 .wish-list{
 	top:0;
 	left:0;
+	padding-top:68px;
 }
 .wish-user{
 	margin-bottom:3px;

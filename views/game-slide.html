@@ -3,7 +3,7 @@
 <div class="carousel-caption game">
  <div ng-controller="gameController as jujuCtrl" class="centered game-container">
  	<img class="game-gif" ng-src="img/gamestart.png" style="position:relative"/>
-    <button class="game-play btn circled" ng-mouseleave="reverseimg()" ng-mouseenter="changeimg()" ng-click="(data.play_last_count > 0) && play()">抽我</button>
+    <button class="game-play btn circled" ng-click="(data.play_last_count > 0) && play()">抽我</button>
     <div class="game-last-time">还有{{data.play_last_count}}次机会yo~</div>
  </div>
 </div>
