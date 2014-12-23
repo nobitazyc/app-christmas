@@ -55,6 +55,14 @@ $(function(){
 						$('#gift').modal('show');
 						break;
 					}
+					// case 2:{
+					// 	$('#friend').modal('show');
+					// 	break;
+					// }
+					// case 3:{
+					// 	$('#extra-invite').modal('show');
+					// 	break;
+					// }
 				}
 
 			$('.game-gif').attr('src','img/gamestart.png');

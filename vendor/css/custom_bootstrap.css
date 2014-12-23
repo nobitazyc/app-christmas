@@ -34,7 +34,7 @@
 .btn-blue{
 	background-color: #1298F2;
 	color:white;
-	padding:6px 20px;
+	padding:6px 23px;
 }
 .btn-orange{
 	background-color: #FFC900;
@@ -147,6 +147,12 @@
 #extra-invite .modal-footer{
 	margin-top:0px;
 }
+#gift .modal-footer{
+	margin-top:20px;
+}
+#fail .modal-footer{
+	padding:0;
+}
 #mywish input,#extra-invite input{
 	width:90%;
 	margin:auto;
@@ -201,6 +207,10 @@
 	padding-left:0;
 	padding-right:0;
 }
+#gift .modal-body{
+	padding-left: 0;
+	padding-right: 0;
+}
 #friend textarea{
 	min-height:100px;
 	width:100%;
@@ -219,8 +229,19 @@
 	max-height: 440px;
 	padding-bottom: 20px;
 }
-#gift .description, #gift .title{
+#gift .title{
+	font-size: 18px;
+}
+#gift .description{
 	font-size: 16px;
+	margin-top:20px;
+	width:90%;
+	margin:auto;
+}
+
+.modal-backdrop.in {
+	opacity: .9;
+	background-color: #050B3A;
 }
 /* panel */
 .invite-panel{
@@ -246,6 +267,7 @@
 	text-shadow: none;
 	
 }
+
 
 .invite-panel .panel-body{
 	border:none;
