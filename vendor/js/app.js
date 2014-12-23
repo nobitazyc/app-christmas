@@ -38,7 +38,9 @@ $(function(){
 			$http.get(host + 'yj/randapi').success(function(data){
 				$scope.result = data.result;
 			})
-
+			$http.get(host + 'yj/niu?userid='+$scope.data.userid).success(function(data){
+				;
+			})
 			$scope.data.play_last_count--;
 			$('.game-play').css('display',"none");
 			$('.game-gif').attr('src','img/game-animation.gif');
