@@ -33,8 +33,8 @@ $(function(){
 	var jujuapp = angular.module("jujuapp",[]);
 	var host = 'http://appwap.juju.la/';
 	function Anim() {
-	   $('#game-gif').addClass('swing animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-	     $(this).removeClass('swing animated');
+	   $('#game-gif').addClass('wobble animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	     $(this).removeClass('wobble animated');
 	   });
 	   setTimeout(function(){
 	   	 $('#egg').addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
