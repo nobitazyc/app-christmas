@@ -11,7 +11,7 @@ $(function(){
       setTimeout(function() {
 	      $('.image_under').css("height",height+"px");
 	    }, 100);
-    }); 
+    });
     $('#carousel-example-generic').on('slide.bs.carousel', function () {
 	  setTimeout(function() {
 	      $('.image_under').css("height",height+"px");
@@ -26,6 +26,22 @@ $(function(){
 	 	});
     }, 300);
 
+  /*处理loading*/
+  function getEle (select) {
+    return document.querySelector(select);
+  }
+  var loading = getEle('#J_loading');
+  var proCur = getEle('#J_proCur');
+  loading.style.display = 'block';
+  setTimeout(function(){
+  	proCur.style.width = '100%';
+  	/*监听动画完成*/
+	  proCur.addEventListener("webkitTransitionEnd", function(){
+	  	console.log('J_proCur');
+	  	loading.style.display = 'none';
+		}, false);
+  }, parseInt(Math.random()*200+50));
+
 });
 
 (function(){
@@ -38,7 +54,7 @@ $(function(){
 	   });
 	   setTimeout(function(){
 	   	 $('#egg').addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-	   	 	
+
 	    });
 	   },1000);
 	   setTimeout(function(){$('#egg').removeClass('bounceInDown animated');},4000);
@@ -277,7 +293,7 @@ $(function(){
 			$http.get(host + 'yj/dodream?userid=' + uid +"&content=" + $scope.myWish.content ).success(function(data){
 				//console.log('已储存');
 			});
-			
+
 			//这里调用接口14储存许愿信息， 参数为$scope.myWish.username, $scope.myWish.content,$scope.myWish.like_count
 		};
 		$scope.likeit = function(index){
