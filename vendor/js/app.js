@@ -32,7 +32,17 @@ $(function(){
 
 	var jujuapp = angular.module("jujuapp",[]);
 	var host = 'http://appwap.juju.la/';
-
+	function Anim() {
+	   $('#game-gif').addClass('swing animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	     $(this).removeClass('swing animated');
+	   });
+	   setTimeout(function(){
+	   	 $('#egg').addClass('bounceInDown animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	   	 	
+	    });
+	   },1000);
+	   setTimeout(function(){$('#egg').removeClass('bounceInDown animated');},4000);
+	};
 	jujuapp.factory('mySharedService', function($rootScope) {
 	    return {
 	        broadcast: function() {
@@ -63,7 +73,8 @@ $(function(){
 			})
 			$scope.data.play_last_count--;
 			$('.game-play').css('display',"none");
-			$('.game-gif').attr('src','img/gameanimation.gif');
+			// $('.game-gif').attr('src','img/gameanimation.gif');
+			Anim();
 			sharedService.broadcast();
 			setTimeout(function(){
 				switch($scope.result){
@@ -85,10 +96,10 @@ $(function(){
 					// }
 				}
 
-			$('.game-gif').attr('src','img/gamestart.png');
+			// $('.game-gif').attr('src','img/gamestart.png');
 			$('.game-play').css('display',"inline-block");
 			$scope.clickcheck = false;
-			}, 4500);
+			}, 2500);
 
 			//这里需要接口9储存抽奖信息， 参数为$scope.
 		};

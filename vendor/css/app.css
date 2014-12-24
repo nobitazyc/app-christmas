@@ -81,12 +81,33 @@ body{
 }
 /*game part*/
 .game-gif{
-	width: 90%;
+
+	width: 288px;
 	margin-top: 20%;
 }
 .game-container{
 	position:relative;
 
+}
+.game-egg{
+	position:absolute;
+	left: 32%;
+	top: 66%;
+	width: 40px;
+	height: 50px;
+	opacity: 0;
+}
+@media screen and (min-width: 380px) {
+   .game-egg{		
+		left: 36%;
+		top: 67%;
+	}
+}
+@media screen and (min-width: 420px) {
+   .game-egg{		
+		left: 38%;
+		top: 68%;
+	}
 }
 .game-play{
 	position: absolute;
