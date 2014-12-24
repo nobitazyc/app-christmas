@@ -4,7 +4,7 @@
  <div ng-controller="gameController as jujuCtrl" class="centered game-container">
  	<img id="game-gif" class="game-gif" ng-src="img/gamestart.png" style="position:relative"/>
  	<img id="egg" class="game-egg" ng-src="img/egg.png" style="position:absolute">
-    <button class="game-play btn circled" ng-click="(data.play_last_count > 0) && play()">抽我</button>
+    <button class="game-play btn circled" ng-click="play()">抽我</button>
     <div id="game-last-time" class="game-last-time">还有{{data.play_last_count}}次机会yo~</div>
  </div>
 </div>

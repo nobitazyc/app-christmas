@@ -79,45 +79,49 @@ $(function(){
 		$scope.result = 0;
 		$scope.clickcheck = false;
 		$scope.play = function(){
-			$scope.clickcheck = true;
-			var audio = new Audio('vendor/sound/audio.mp3');
-			audio.play();
-			$http.get(host + 'merry/randapi').success(function(data){
-				$scope.result = data.result;
-			})
-			$http.get(host + 'yj/niu?userid='+$scope.data.userid).success(function(data){
-				;
-			})
-			$scope.data.play_last_count--;
-			$('.game-play').css('display',"none");
-			// $('.game-gif').attr('src','img/gameanimation.gif');
-			Anim();
-			sharedService.broadcast();
-			setTimeout(function(){
-				switch($scope.result){
-					case 0:{
-						$('#fail').modal('show');
-						break;
+			if($scope.data.play_last_count > 0){
+				$scope.clickcheck = true;
+				var audio = new Audio('vendor/sound/audio.mp3');
+				audio.play();
+				$http.get(host + 'merry/randapi').success(function(data){
+					$scope.result = data.result;
+				})
+				$http.get(host + 'yj/niu?userid='+$scope.data.userid).success(function(data){
+					;
+				})
+				$scope.data.play_last_count--;
+				$('.game-play').css('display',"none");
+				// $('.game-gif').attr('src','img/gameanimation.gif');
+				Anim();
+				setTimeout(function(){
+					switch($scope.result){
+						case 0:{
+							$('#fail').modal('show');
+							break;
+						}
+						case 1:{
+							$('#gift').modal('show');
+							sharedService.broadcast();
+							break;
+						}
+						// case 2:{
+						// 	$('#friend').modal('show');
+						// 	break;
+						// }
+						// case 3:{
+						// 	$('#extra-invite').modal('show');
+						// 	break;
+						// }
 					}
-					case 1:{
-						$('#gift').modal('show');
-						break;
-					}
-					// case 2:{
-					// 	$('#friend').modal('show');
-					// 	break;
-					// }
-					// case 3:{
-					// 	$('#extra-invite').modal('show');
-					// 	break;
-					// }
-				}
 
-			// $('.game-gif').attr('src','img/gamestart.png');
-			$('.game-play').css('display',"inline-block");
-			$scope.clickcheck = false;
-			}, 2500);
-
+				// $('.game-gif').attr('src','img/gamestart.png');
+				$('.game-play').css('display',"inline-block");
+				$scope.clickcheck = false;
+				}, 2500);
+			}
+			else{
+				$("#comedy").modal('show');
+			}
 			//这里需要接口9储存抽奖信息， 参数为$scope.
 		};
 	}]);
