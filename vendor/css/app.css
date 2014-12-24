@@ -81,7 +81,7 @@ body{
 }
 /*game part*/
 .game-gif{
-	width: 100%;
+	width: 90%;
 	margin-top: 20%;
 }
 .game-container{
@@ -146,12 +146,16 @@ body{
 .wish-list{
 	top:0;
 	left:0;
-	padding-top:68px;
+	padding-top:48px;
 }
 .wish-user{
 	margin-bottom:3px;
 	color:#339CF4;
 	font-size:13px;
+}
+.wish-container{
+	max-height:300px;
+	overflow: scroll;
 }
 .wish-content{
 	font-size:13px;
@@ -161,14 +165,19 @@ body{
 	border-bottom:1px solid rgba(255,255,255,0.2);
 	margin-left:10px;
 	margin-right:10px;
+	width:92%;
 }
 .wish-avarta{
 	margin-top:10px;
 	margin-left:10px;
-	width:50px;
-	height:50px;
+	width:40px;
+	height:40px;
 	float: left;
 	margin-bottom:10px;
+}
+.wish_liked{
+	margin-top:10px;
+	color:#FDC700;
 }
 .like-count{
 	margin-top:12px;

@@ -1,10 +1,30 @@
 $(function(){
+	var height = $(window).height()+60;
 	$(".item").on("swipeleft",function(){
       $('.carousel').carousel('next');
+      setTimeout(function() {
+	      $('.image_under').css("height",height+"px");
+	    }, 100);
     });
     $(".item").on("swiperight",function(){
       $('.carousel').carousel('prev');
-    });
+      setTimeout(function() {
+	      $('.image_under').css("height",height+"px");
+	    }, 100);
+    }); 
+    $('#carousel-example-generic').on('slide.bs.carousel', function () {
+	  setTimeout(function() {
+	      $('.image_under').css("height",height+"px");
+	    }, 100);
+	})
+    setTimeout(function() {
+      $('.image_under').css("height",height+"px");
+      $('.wish-container').bind('scroll', function(){
+	    	if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight){
+	     		angular.element('#wish_controller').scope().refresh();
+	   		}
+	 	});
+    }, 300);
 
 });
 
