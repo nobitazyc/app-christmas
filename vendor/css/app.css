@@ -54,6 +54,7 @@
 body{
 	background: url('../../img/christmas-bg.png') no-repeat left top;
 	background-size: 100%;
+	background-color: #0C1239;
 }
 .ui-loader{
 	display: none;
@@ -64,10 +65,11 @@ body{
 	padding:0;
 }
 .game{
-	position:absolute;
-	width:100%;
-	top:-10%;
-	left:0;
+	position: absolute;
+	width: 100%;
+	top: 0%;
+	left: 0;
+	padding-top: 0;
 }
 .wish-list{
 	width:100%;
@@ -83,7 +85,7 @@ body{
 .game-gif{
 
 	width: 288px;
-	margin-top: 20%;
+	margin-top: 64px;
 }
 .game-container{
 	position:relative;
@@ -145,6 +147,7 @@ body{
 }
 .recommend-image{
 	width:100%;
+	max-height: 185px;
 }
 .recommend-user, .recommend-attribute, .recommend-price{
 	font-size: 20px;
