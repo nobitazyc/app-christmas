@@ -37,7 +37,6 @@ $(function(){
   	proCur.style.width = '100%';
   	/*监听动画完成*/
 	  proCur.addEventListener("webkitTransitionEnd", function(){
-	  	console.log('J_proCur');
 	  	loading.style.display = 'none';
 		}, false);
   }, parseInt(Math.random()*200+50));
