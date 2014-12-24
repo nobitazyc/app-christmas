@@ -65,6 +65,8 @@ $(function(){
 		$scope.clickcheck = false;
 		$scope.play = function(){
 			$scope.clickcheck = true;
+			var audio = new Audio('vendor/sound/audio.mp3');
+			audio.play();
 			$http.get(host + 'merry/randapi').success(function(data){
 				$scope.result = data.result;
 			})

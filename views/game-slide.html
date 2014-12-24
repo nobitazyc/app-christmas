@@ -2,6 +2,10 @@
 <img src="img/nonebg.png" class="image_under" style="width:100%" alt="...">
 <div class="carousel-caption game">
  <div ng-controller="gameController as jujuCtrl" class="centered game-container">
+ 	<audio id="sound1" >
+	 	<source src="../vendor/sound/audio.mp3"></source>
+	 </audio>
+
  	<img id="game-gif" class="game-gif" ng-src="img/gamestart.png" style="position:relative"/>
  	<img id="egg" class="game-egg" ng-src="img/egg.png" style="position:absolute">
     <button class="game-play btn circled" ng-click="(data.play_last_count > 0) && play()">抽我</button>
